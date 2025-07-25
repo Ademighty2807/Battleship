@@ -1,0 +1,69 @@
+
+body {
+      background-image: url('https://cdn.britannica.com/73/133873-050-B1EB958E/USS-Missouri.jpg'); /* local file or URL */
+      background-size: cover;       /* makes the image cover the whole area */
+      background-position: center;  /* centers the image */
+      background-repeat: no-repeat; /* prevents repeating */
+      height: 100vh;                /* ensures it fills the viewport */
+      margin: 0;
+    }
+
+h1 {
+  color: lightblue;
+  text-align: center;
+  font-size: 5em;
+}
+
+#message {
+  color: lightblue;
+  font-size: 2em;
+  text-align: center;
+}
+
+button {
+  margin-left: 15%;
+  font-size: 1em;
+  white-space: nowrap;
+  border: none;
+  background: lightblue;
+  color: whitesmoke;
+  padding: 4px;
+  width: 180px;
+  height: 30px;
+}
+
+#boards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 1px;
+    margin: 10px;
+    border: 2px solid #444;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: #e2e2e2;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .cell.ship {
+    background-color: gray;
+  }
+  
+  .cell.hit {
+    background-color: red;
+  }
+  
+  .cell.miss {
+    background-color: lightblue;
+  }
+  
